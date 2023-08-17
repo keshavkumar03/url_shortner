@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Link</title>
+    <style>body, h1, h2, h3, p, ul, li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: 'FontName', sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-top: 50px;
+    }
+    
+    form {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #007bff;
+    }
+    
+    input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    button {
+        padding: 12px 20px;
+        background-color: #5185bc;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    p {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+        color: #5185bc;
+
+        
+    }
+    header{
+    margin-bottom: 20vh;
+    background-color: #5185bc;
+    height: 40px;
+  padding: 20px;
+    text-align: center;
+}
+
+footer{
+    margin-top: 50vh;
+    background-color: #5185bc;
+    text-align: center;
+    height: 50px;
+  padding: 20px;
+}
+    </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <header><h2><i class="fa fa-cloud">
+         URL Shortner
+    </i></h2></header>
+    
+    
+    <div class="container">
+        <h2>PASTE THE LINK BELOW</h2>
+        <form action="/submit" method="post">
+            <label for="url">Paste the link</label>
+            <input type="text" name="url" placeholder="Paste here">
+            <button type="submit">Submit</button>
+        </form>
+
+        <% if (short_url) { %>
+           <strong><p>Shortened Link: <a href="<%= short_url %>"><%= short_url %></a></p></strong> 
+        <% } %>
+
+        
+    </div>
+    
+</body>
+<footer>
+    <h3><i class="fa fa-github"></i> github:<a href="https://github.com/keshavkumar03">@keshavkumar</a></h3> 
+    <br>
+    <h3><i class="fa fa-linkedin-square"></i> linkdein:<a href="https://www.linkedin.com/in/keshav-kumar-9966a7203/">@keshavkumar</a></h3>
+    
+</footer>
+</html>
